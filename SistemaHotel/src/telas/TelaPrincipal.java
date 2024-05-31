@@ -43,6 +43,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenu8 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(36, 144, 86));
         setResizable(false);
 
         jMenuCadastros.setText("Cadastros   |");
@@ -120,8 +121,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenu7.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
         jMenuBar1.add(jMenu7);
 
+        jMenu8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/exit (1).png"))); // NOI18N
         jMenu8.setText("Sair");
         jMenu8.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
+        jMenu8.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         jMenuBar1.add(jMenu8);
 
         setJMenuBar(jMenuBar1);
@@ -130,7 +133,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 836, Short.MAX_VALUE)
+            .addGap(0, 938, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
