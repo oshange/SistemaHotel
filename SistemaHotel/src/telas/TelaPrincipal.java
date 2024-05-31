@@ -34,6 +34,18 @@ public class TelaPrincipal extends javax.swing.JFrame {
         mnQuartos = new javax.swing.JMenu();
         mntCadastrarQuarto = new javax.swing.JMenuItem();
         mntConsultarQuarto = new javax.swing.JMenuItem();
+        mnFuncionarios = new javax.swing.JMenu();
+        mntCadastrarFuncionarios = new javax.swing.JMenuItem();
+        mntConsultarFuncionarios = new javax.swing.JMenuItem();
+        mnFornecedores = new javax.swing.JMenu();
+        mntCadastrarFornecedores = new javax.swing.JMenuItem();
+        mntConsultarFornecedores = new javax.swing.JMenuItem();
+        mnProdutos = new javax.swing.JMenu();
+        jMenuItem5 = new javax.swing.JMenuItem();
+        jMenuItem6 = new javax.swing.JMenuItem();
+        mnServicos = new javax.swing.JMenu();
+        jMenuItem7 = new javax.swing.JMenuItem();
+        jMenuItem8 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenu3 = new javax.swing.JMenu();
         jMenu4 = new javax.swing.JMenu();
@@ -46,13 +58,16 @@ public class TelaPrincipal extends javax.swing.JFrame {
         setBackground(new java.awt.Color(36, 144, 86));
         setResizable(false);
 
+        jMenuCadastros.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/icons8-address-book-2-32.png"))); // NOI18N
         jMenuCadastros.setText("Cadastros   |");
         jMenuCadastros.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
 
+        mnHospedes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/icons8-bed-20.png"))); // NOI18N
         mnHospedes.setText("Hóspedes");
         mnHospedes.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
 
         mntCadastrarHospede.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
+        mntCadastrarHospede.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/icons8-add-user-male-20.png"))); // NOI18N
         mntCadastrarHospede.setText("Cadastrar");
         mntCadastrarHospede.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -62,6 +77,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         mnHospedes.add(mntCadastrarHospede);
 
         mntConsultarHospede.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
+        mntConsultarHospede.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/icons8-human-research-program-20.png"))); // NOI18N
         mntConsultarHospede.setText("Consultar");
         mntConsultarHospede.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -72,10 +88,12 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jMenuCadastros.add(mnHospedes);
 
+        mnQuartos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/icons8-door-hanger-20.png"))); // NOI18N
         mnQuartos.setText("Quartos");
         mnQuartos.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
 
         mntCadastrarQuarto.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
+        mntCadastrarQuarto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/icons8-add-20.png"))); // NOI18N
         mntCadastrarQuarto.setText("Cadastrar");
         mntCadastrarQuarto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -85,6 +103,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         mnQuartos.add(mntCadastrarQuarto);
 
         mntConsultarQuarto.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
+        mntConsultarQuarto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/icons8-search-20.png"))); // NOI18N
         mntConsultarQuarto.setText("Consultar");
         mntConsultarQuarto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -95,33 +114,89 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jMenuCadastros.add(mnQuartos);
 
+        mnFuncionarios.setText("Funcionários");
+
+        mntCadastrarFuncionarios.setText("Cadastrar");
+        mntCadastrarFuncionarios.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mntCadastrarFuncionariosActionPerformed(evt);
+            }
+        });
+        mnFuncionarios.add(mntCadastrarFuncionarios);
+
+        mntConsultarFuncionarios.setText("Consultar");
+        mnFuncionarios.add(mntConsultarFuncionarios);
+
+        jMenuCadastros.add(mnFuncionarios);
+
+        mnFornecedores.setText("Fornecedores");
+
+        mntCadastrarFornecedores.setText("Cadastrar");
+        mntCadastrarFornecedores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mntCadastrarFornecedoresActionPerformed(evt);
+            }
+        });
+        mnFornecedores.add(mntCadastrarFornecedores);
+
+        mntConsultarFornecedores.setText("Consultar");
+        mnFornecedores.add(mntConsultarFornecedores);
+
+        jMenuCadastros.add(mnFornecedores);
+
+        mnProdutos.setText("Produtos");
+
+        jMenuItem5.setText("Cadastrar");
+        mnProdutos.add(jMenuItem5);
+
+        jMenuItem6.setText("Consultar");
+        mnProdutos.add(jMenuItem6);
+
+        jMenuCadastros.add(mnProdutos);
+
+        mnServicos.setText("Serviços");
+
+        jMenuItem7.setText("Cadastrar");
+        mnServicos.add(jMenuItem7);
+
+        jMenuItem8.setText("Consultar");
+        mnServicos.add(jMenuItem8);
+
+        jMenuCadastros.add(mnServicos);
+
         jMenuBar1.add(jMenuCadastros);
 
+        jMenu2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/icons8-calendar-32.png"))); // NOI18N
         jMenu2.setText("Reservas   |");
         jMenu2.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
         jMenuBar1.add(jMenu2);
 
-        jMenu3.setText("Consumo   |");
+        jMenu3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/icons8-dinner-32.png"))); // NOI18N
+        jMenu3.setText("Vendas   |");
         jMenu3.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
         jMenuBar1.add(jMenu3);
 
+        jMenu4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/icons8-money-32.png"))); // NOI18N
         jMenu4.setText("Financeiro   |");
         jMenu4.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
         jMenuBar1.add(jMenu4);
 
-        jMenu5.setText("Relatório   |");
+        jMenu5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/icons8-note-32.png"))); // NOI18N
+        jMenu5.setText("Relatórios   |");
         jMenu5.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
         jMenuBar1.add(jMenu5);
 
+        jMenu6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/icons8-microsoft-admin-32.png"))); // NOI18N
         jMenu6.setText("Segurança   |");
         jMenu6.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
         jMenuBar1.add(jMenu6);
 
+        jMenu7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/icons8-tools-32.png"))); // NOI18N
         jMenu7.setText("Ferramentas   |");
         jMenu7.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
         jMenuBar1.add(jMenu7);
 
-        jMenu8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/exit (1).png"))); // NOI18N
+        jMenu8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/icons8-open-door-32.png"))); // NOI18N
         jMenu8.setText("Sair");
         jMenu8.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
         jMenu8.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
@@ -133,11 +208,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 938, Short.MAX_VALUE)
+            .addGap(0, 1103, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 483, Short.MAX_VALUE)
+            .addGap(0, 473, Short.MAX_VALUE)
         );
 
         pack();
@@ -159,6 +234,14 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private void mntConsultarQuartoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mntConsultarQuartoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_mntConsultarQuartoActionPerformed
+
+    private void mntCadastrarFuncionariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mntCadastrarFuncionariosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mntCadastrarFuncionariosActionPerformed
+
+    private void mntCadastrarFornecedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mntCadastrarFornecedoresActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mntCadastrarFornecedoresActionPerformed
 
     /**
      * @param args the command line arguments
@@ -205,10 +288,22 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu8;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenu jMenuCadastros;
+    private javax.swing.JMenuItem jMenuItem5;
+    private javax.swing.JMenuItem jMenuItem6;
+    private javax.swing.JMenuItem jMenuItem7;
+    private javax.swing.JMenuItem jMenuItem8;
+    private javax.swing.JMenu mnFornecedores;
+    private javax.swing.JMenu mnFuncionarios;
     private javax.swing.JMenu mnHospedes;
+    private javax.swing.JMenu mnProdutos;
     private javax.swing.JMenu mnQuartos;
+    private javax.swing.JMenu mnServicos;
+    private javax.swing.JMenuItem mntCadastrarFornecedores;
+    private javax.swing.JMenuItem mntCadastrarFuncionarios;
     private javax.swing.JMenuItem mntCadastrarHospede;
     private javax.swing.JMenuItem mntCadastrarQuarto;
+    private javax.swing.JMenuItem mntConsultarFornecedores;
+    private javax.swing.JMenuItem mntConsultarFuncionarios;
     private javax.swing.JMenuItem mntConsultarHospede;
     private javax.swing.JMenuItem mntConsultarQuarto;
     // End of variables declaration//GEN-END:variables
