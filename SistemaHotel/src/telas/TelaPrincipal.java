@@ -14,7 +14,10 @@ public class TelaPrincipal extends javax.swing.JFrame {
      * Creates new form TelaPrincipal
      */
     public TelaPrincipal() {
+       
         initComponents();
+        
+        setExtendedState(MAXIMIZED_BOTH);
     }
 
     /**
@@ -83,7 +86,6 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenu8 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(36, 144, 86));
         setResizable(false);
 
         jMenuCadastros.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/icons8-spiral-bound-booklet-32.png"))); // NOI18N
@@ -189,7 +191,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jMenuCadastros.add(mnFornecedores);
 
-        mnProdutos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/icons8-open-box-20.png"))); // NOI18N
+        mnProdutos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/icons8-ingredients-for-cooking-20.png"))); // NOI18N
         mnProdutos.setText("Produtos");
         mnProdutos.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
 
@@ -232,12 +234,18 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenu2.setText("Reservas   |");
         jMenu2.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
 
+        mntCadastrarReserva.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
+        mntCadastrarReserva.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/icons8-edit-calendar-20.png"))); // NOI18N
         mntCadastrarReserva.setText("Cadastrar Reserva");
         jMenu2.add(mntCadastrarReserva);
 
+        mntConsultarReserva.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
+        mntConsultarReserva.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/icons8-view-schedule-20.png"))); // NOI18N
         mntConsultarReserva.setText("Consultar Reserva");
         jMenu2.add(mntConsultarReserva);
 
+        mntFinalizarReserva.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
+        mntFinalizarReserva.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/icons8-today-20.png"))); // NOI18N
         mntFinalizarReserva.setText("Finalizar Reserva");
         jMenu2.add(mntFinalizarReserva);
 
@@ -247,9 +255,13 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenu3.setText("Vendas   |");
         jMenu3.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
 
+        mntVenderProdutos.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
+        mntVenderProdutos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/icons8-basket-20.png"))); // NOI18N
         mntVenderProdutos.setText("Produtos");
         jMenu3.add(mntVenderProdutos);
 
+        mntVenderServicos.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
+        mntVenderServicos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/icons8-laundry-20.png"))); // NOI18N
         mntVenderServicos.setText("Serviços");
         jMenu3.add(mntVenderServicos);
 
@@ -259,21 +271,31 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenu4.setText("Financeiro   |");
         jMenu4.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
 
+        mnContasPagar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/icons8-cash-in-hand-20.png"))); // NOI18N
         mnContasPagar.setText("Contas à pagar");
+        mnContasPagar.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
 
+        mntCadastrarContaPagar.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
+        mntCadastrarContaPagar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/icons8-signing-a-document-20.png"))); // NOI18N
         mntCadastrarContaPagar.setText("Cadastrar");
         mnContasPagar.add(mntCadastrarContaPagar);
 
+        mntConsultarContaPagar.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
+        mntConsultarContaPagar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/search-20.png"))); // NOI18N
         mntConsultarContaPagar.setText("Consultar");
         mnContasPagar.add(mntConsultarContaPagar);
 
         jMenu4.add(mnContasPagar);
 
+        mnContasReceber.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/icons8-buy-for-cash-20.png"))); // NOI18N
         mnContasReceber.setText("Contas à receber");
+        mnContasReceber.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
 
+        mntCadastrarContaReceber.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/icons8-signing-a-document-20.png"))); // NOI18N
         mntCadastrarContaReceber.setText("Cadastrar");
         mnContasReceber.add(mntCadastrarContaReceber);
 
+        mntConsultarContaReceber.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/search-20.png"))); // NOI18N
         mntConsultarContaReceber.setText("Consultar");
         mntConsultarContaReceber.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -284,6 +306,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jMenu4.add(mnContasReceber);
 
+        mntFazerBalanco.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
+        mntFazerBalanco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/icons8-estimate-20.png"))); // NOI18N
         mntFazerBalanco.setText("Balanço");
         jMenu4.add(mntFazerBalanco);
 
@@ -293,34 +317,44 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenu5.setText("Relatórios   |");
         jMenu5.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
 
+        mnFinanceiro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/icons8-pay-20.png"))); // NOI18N
         mnFinanceiro.setText("Financeiro");
+        mnFinanceiro.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
         jMenu5.add(mnFinanceiro);
         mnFinanceiro.getAccessibleContext().setAccessibleParent(null);
 
         mnReservas.setText("Reservas");
+        mnReservas.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
 
+        mntQuartosDisponiveis.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
         mntQuartosDisponiveis.setText("Quartos Disponíveis");
         mnReservas.add(mntQuartosDisponiveis);
 
+        mntQuartosOcupados.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
         mntQuartosOcupados.setText("Quartos Ocupados");
         mnReservas.add(mntQuartosOcupados);
 
+        mntReservasFuturas.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
         mntReservasFuturas.setText("Reservas Futuras");
         mnReservas.add(mntReservasFuturas);
 
         jMenu5.add(mnReservas);
 
         mnVendas.setText("Vendas");
+        mnVendas.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
         jMenu5.add(mnVendas);
 
+        jMenuItem1.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
         jMenuItem1.setText("Hóspedes");
         jMenu5.add(jMenuItem1);
         jMenuItem1.getAccessibleContext().setAccessibleParent(mnHospedes);
 
+        jMenuItem2.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
         jMenuItem2.setText("Funcionários");
         jMenu5.add(jMenuItem2);
         jMenuItem2.getAccessibleContext().setAccessibleParent(mntCadastrarFuncionarios);
 
+        jMenuItem3.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
         jMenuItem3.setText("Fornecedores");
         jMenu5.add(jMenuItem3);
         jMenuItem3.getAccessibleContext().setAccessibleParent(mnFornecedores);
@@ -331,9 +365,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenu6.setText("Segurança   |");
         jMenu6.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
 
+        mntFazerBackup.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
         mntFazerBackup.setText("Fazer Backup");
         jMenu6.add(mntFazerBackup);
 
+        mntRestaurarBackup.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
         mntRestaurarBackup.setText("Restaurar Backup");
         jMenu6.add(mntRestaurarBackup);
 
@@ -344,18 +380,23 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenu7.setFont(new java.awt.Font("Poppins Medium", 0, 14)); // NOI18N
 
         mnTelaDeFundo.setText("Tela de Fundo");
+        mnTelaDeFundo.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
 
+        mntAddImagem.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
         mntAddImagem.setText("Add Imagem");
         mnTelaDeFundo.add(mntAddImagem);
 
+        mntRemoverImagem.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
         mntRemoverImagem.setText("Remover Imagem");
         mnTelaDeFundo.add(mntRemoverImagem);
 
+        mntRestaurarPadrao.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
         mntRestaurarPadrao.setText("Restaurar Padrão");
         mnTelaDeFundo.add(mntRestaurarPadrao);
 
         jMenu7.add(mnTelaDeFundo);
 
+        mntSobreOSistema.setFont(new java.awt.Font("Poppins Medium", 0, 12)); // NOI18N
         mntSobreOSistema.setText("Sobre o sistema");
         jMenu7.add(mntSobreOSistema);
 
